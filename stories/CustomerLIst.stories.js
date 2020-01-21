@@ -9,7 +9,7 @@ export default {
 
 export const actionsData = {
     action: action('clicked in storybook')
-}
+};
 const CustomerListTemplate = `<customer-list :active="active" @click="action"></customer-list>`;
 
 export const DefaultListActive = () => ({
@@ -31,4 +31,4 @@ export const DefaultListInactive = () => ({
         }
     },
     methods: actionsData
-})
+});

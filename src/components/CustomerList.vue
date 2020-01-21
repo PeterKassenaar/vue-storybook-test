@@ -27,7 +27,7 @@
         },
         methods:{
             handleClick(){
-                this.$emit('click', 'customer list clicked...1,2,3')
+                this.$emit('click', 'customer list clicked...1,2,3 Active? : '+ this.active)
             }
         }
     }

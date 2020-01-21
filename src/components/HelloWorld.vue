@@ -6,32 +6,35 @@
             check out the
             <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
         </p>
+        <p><input type="checkbox" @change="handleCheckbox()"> Customer List Active</p>
         <customer-list :active="isActive" @click="handleClick($event)"/>
     </div>
 </template>
 
 <script>
-    import CustomerList from "./CustomerList";
+	import CustomerList from "./CustomerList";
 
-    export default {
-        name: 'HelloWorld',
-        components: {CustomerList},
-        data() {
-            return {
-                isActive: true
-            }
-        }
-        ,
-        props: {
-            msg: String
-        },
-        methods:{
-            handleClick(event){
-                // eslint-disable-next-line no-console
-                console.log('captured: ', event);
-            }
-        }
-    }
+	export default {
+		name: 'HelloWorld',
+		components: {CustomerList},
+		data() {
+			return {
+				isActive: false
+			}
+		},
+		props: {
+			msg: String
+		},
+		methods: {
+			handleClick(event) {
+				// eslint-disable-next-line no-console
+				console.log('captured: ', event);
+			},
+			handleCheckbox() {
+				this.isActive = !this.isActive;
+			}
+		}
+	}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
